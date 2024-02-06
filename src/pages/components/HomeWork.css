@@ -2,6 +2,21 @@
     --picture-radius: .5rem;
     position: relative;
     font-family: Italiana;
+
+    &::before {
+        position: absolute;
+        content: attr(data-techstack);
+        display: grid;
+        place-items: center;
+        inset: 0;
+        z-index: 2;
+        transition: opacity ease-in .3s;
+        background-color: rgba(255, 255, 255, 0.8);
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+    }
+
     img {
         /* border: black 1px solid; */
         /* box-shadow: 0 0 6px rgb(137, 137, 137); */
@@ -9,6 +24,12 @@
         border-radius: var(--picture-radius);
         overflow: hidden;
     }
+
+    &:hover::before {
+        /* content: attr(data-techstack); */
+        opacity: 1;
+    }
+    
     /* &::before{
         position: absolute;
         content: '';
@@ -19,6 +40,7 @@
         filter: drop-shadow(0px 2px 3px rgb(219, 219, 219));
         z-index: 1;
     } */
+
     &::after{
         position: absolute;
         content: attr(data-item);
