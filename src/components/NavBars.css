@@ -1,0 +1,37 @@
+.menu-btn-svg {
+
+    &,* {
+        transition: linear 0.2s transform;
+    }
+
+    [data-line1] {
+        transform: translateY(-2px);
+    }
+
+    [data-line2] {
+        transform: translateY(2px);
+    }
+
+    &[data-selected="true"] {
+        transform: rotate(180deg);
+        [data-line1] {
+            transform: rotate(45deg);
+        }
+        [data-line2] {
+            transform: rotate(-45deg);
+        }
+        
+    }
+}
+
+.title {
+    font-family: Italiana;
+    font-size: 1.8rem;
+}
+
+nav {
+    padding: clamp(0.5rem, 5vw, 3rem);
+    border-bottom: black 1px solid;
+    background-color: white;
+    z-index: 100;
+}
