@@ -1,0 +1,7 @@
+[data-animation="scroll-x"] {
+    position: relative;
+    &> * {
+        position: absolute;
+        animation: scroll-x 30s linear forwards infinite;
+    }
+}

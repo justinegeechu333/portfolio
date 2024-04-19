@@ -14,7 +14,7 @@ function Layout() {
                 <Routes>
                     <Route path="/" element={<Hero />} />
                 </Routes>
-                <main className="max-w-xl mx-auto px-2">
+                <main className="mx-auto px-2">
                     <Outlet />
                 </main>
             </section>

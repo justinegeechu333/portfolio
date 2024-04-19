@@ -9,13 +9,15 @@ const BAR_COLOR = "#000";
 const NavBars = () => {
     const { isSelected, setSelected } = useParams();
     return (
-        <nav className="w-full flex flex-row items-center md:h-16 md:p-8 sticky top-0">
+        <nav className="w-full flex flex-row items-center sm:h-16 sm:p-8 sticky top-0">
             <NavLink to="/" className="grow-0 shrink-0 flex title">JustineChu</NavLink>
-            <div className='flex grow md:hidden'>
+            <div className='flex grow sm:hidden'>
             </div>
-            <div className="hidden md:flex justify-end grow h-full items-center">
+            <div data-section="routes" className="hidden sm:flex justify-end grow h-full items-center gap-4">
                 <NavLink to="/Works">Works</NavLink>
+                <NavLink to="/Contact">Contact</NavLink>
             </div>
+
             <button onClick={() => {
                 if (isSelected) {
                     setSelected(false)
@@ -23,7 +25,7 @@ const NavBars = () => {
                     setSelected(true)
                 }
             }}
-                className="shrink-0 grow-0 w-6 h-6 md:hidden"
+                className="shrink-0 grow-0 w-6 h-6 sm:hidden"
             >
                 <svg viewBox='-5 -5 10 10' className="menu-btn-svg" data-selected={isSelected}>
                     <line x1={-5} x2={5} y1={0} y2={0} stroke={BAR_COLOR} strokeWidth={1} data-line1 />

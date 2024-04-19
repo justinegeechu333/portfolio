@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeHeader = ({ title }) => {
     return (
-        <h2 className='p-4 '>
+        <h2 className='p-4'>
             {title}
         </h2>
     );
