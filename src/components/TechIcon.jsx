@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Techicon.css";
+import "./TechIcon.css";
 
 const TechIcon = ({ name }) => {
     const path = name.includes('.') ? `/tech-stacks/${name}` : `/tech-stacks/${name}.svg`;
