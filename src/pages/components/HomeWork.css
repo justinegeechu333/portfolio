@@ -3,8 +3,14 @@
         --picture-radius: .5rem;
         position: relative;
         font-family: Italiana;
-    
-        &::before {
+        .home-work-tech-stack {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 0.3rem;
+        }
+        .layover {
             position: absolute;
             content: attr(data-techstack);
             display: grid;
@@ -26,9 +32,12 @@
             overflow: hidden;
         }
     
-        &:hover::before {
+        &:hover {
+            .layover {
+                opacity: 1;
+
+            }
             /* content: attr(data-techstack); */
-            opacity: 1;
         }
         
         /* &::before{
