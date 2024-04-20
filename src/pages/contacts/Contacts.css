@@ -17,20 +17,7 @@
       display: grid;
       place-items: center;
     }
-    span[data-hover-info]:hover {
-      position: relative;
-      outline: 1px solid orange;
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: calc(100% + 3px);
-        width: max-content;
-        height: auto;
-        content: attr(data-hover-info);
-        background: lemonchiffon;
-        padding: 0.2rem;
-      }
-    }
+
     svg,
     img {
       width: 4rem;

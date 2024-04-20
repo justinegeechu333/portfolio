@@ -14,3 +14,19 @@ body {
 #root {
   min-height: 100vh;
 }
+
+*[data-hover-info]:hover {
+  position: relative;
+  outline: 1px solid orange;
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 3px);
+    font-size: inherit;
+    width: max-content;
+    height: auto;
+    content: attr(data-hover-info);
+    background: lemonchiffon;
+    padding: 0.2rem;
+  }
+}
