@@ -1,0 +1,40 @@
+[data-section="contact"] {
+  font-family: Italiana;
+  font-size: x-large;
+  .contact-list {
+    font-family: sans-serif;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    span {
+      flex: 1 0 4rem;
+      user-select: none;
+      display: grid;
+      place-items: center;
+    }
+    span[data-hover-info]:hover {
+      position: relative;
+      outline: 1px solid orange;
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 3px);
+        width: max-content;
+        height: auto;
+        content: attr(data-hover-info);
+        background: lemonchiffon;
+        padding: 0.2rem;
+      }
+    }
+    svg,
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

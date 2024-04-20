@@ -1,9 +1,16 @@
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
-    min-width: 0;
-    min-height: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+}
