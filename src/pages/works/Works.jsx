@@ -15,17 +15,22 @@ const Works = () => {
     >
       <section data-section="works">
         <h2 className="p-4">Works</h2>
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col gap-4 pb-4">
           {works
             .filter(filterFunc)
-            .map(({ name, image, techStacks, description }) => (
-              <AWork
-                key={name}
-                workName={name}
-                image={image}
-                techStacks={techStacks}
-                description={description}
-              />
+            .map(({ name, image, techStacks, description }, idx) => (
+              <>
+                {idx !== 0 && (
+                  <span className="w-full h-[1px] bg-slate-400"></span>
+                )}
+                <AWork
+                  key={name}
+                  workName={name}
+                  image={image}
+                  techStacks={techStacks}
+                  description={description}
+                />
+              </>
             ))}
         </section>
       </section>
